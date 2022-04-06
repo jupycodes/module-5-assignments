@@ -1,0 +1,14 @@
+<h1>
+    Cities
+</h1>
+
+<div *ngFor="let city of cities">
+    <h4 [class.green]="city.attractionSites.length < 3">City: {{city.name}} </h4>
+    <div>
+        <p>Attraction Sites:</p>
+        <p>{{city.attractionSites}}</p>
+    </div>
+    
+
+</div>
+

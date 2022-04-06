@@ -1,0 +1,62 @@
+<form [formGroup]="techIdeasForm">
+    <div>
+        <label for="userName">Name</label>
+        <input type="text" id="userName" formControlName="name">
+   
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            Please insert your name.
+        </span> 
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            Your name should be longer than two characters.
+        </span> 
+        <span *ngIf="nameFormControl.dirty && nameFormControl?.errors?.['forbiddenWord']">
+            You cannot use the word "tourist".
+        </span>  
+    </div>
+    <br>
+    <div>
+        <label for="userEmail">E-Mail</label>
+        <input type="text" id="userEmail" formControlName="email">
+    
+        <span *ngIf="emailFormControl.touched && (emailFormControl.errors?.['required'] || emailFormControl.errors?.['email'])">
+            Please enter a valid email.
+        </span> 
+    </div>
+    <br>
+    <div>
+        <label for="userAge">Age</label>
+        <input type="text" id="userAge" formControlName="age">
+    
+        <span *ngIf="ageFormControl.touched && ageFormControl.errors?.['required']">
+            Please enter your age.
+        </span> 
+    </div>
+    <br>
+    <div>
+        <label for="targetCity">Target City</label>
+        <select id="targetCity" formControlName="city">
+            <option value="{{cities}}" *ngFor="let city of cities">{{city}}</option>
+        </select>
+    
+        <span *ngIf="cityFormControl.touched && cityFormControl.errors?.['required']">
+            Please select a city.
+        </span> 
+    </div>
+    <br>
+    <div>
+        <label for="brief">Brief about your Technical Idea</label>
+        <textarea rows="4" cols="50" id="brief" formControlName="brief"></textarea>
+    
+        <span *ngIf="briefFormControl.touched && briefFormControl.errors?.['required']">
+            Please insert a brief description of your project.
+        </span> 
+        <span *ngIf="briefFormControl.dirty && briefFormControl.errors?.['minlength']">
+            The description should be at least 100 characters.
+        </span> 
+        <span *ngIf="briefFormControl.dirty && briefFormControl?.errors?.['forbiddenWord']">
+            You cannot use the word "nothing".
+        </span> 
+    </div>
+    <br>
+    <button type="button" (click)="onSubmit()" [disabled]="techIdeasForm.invalid">Submit</button>
+</form>

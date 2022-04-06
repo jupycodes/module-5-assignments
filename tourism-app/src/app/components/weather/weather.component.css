@@ -1,0 +1,20 @@
+.styleCities {
+    text-decoration: none;
+    border: 1px solid red;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-style: italic;
+}
+
+a:hover {
+    background-color: red;
+}
+
+div {
+    margin-top: 50px;
+}
+
+li {
+    margin-top: 30px;
+}
