@@ -1,10 +1,10 @@
 import {cityinfo} from './cities-info';
 
 export const Citiesinfo: cityinfo[] = [
-    {name:"Aswan", attractionSites:["Abu-Simbel","Nubian Museum","Elephantine"]},
-    {name:"Cairo", attractionSites:["The Pyramids","Nile","Khan elKhalili"]},
-    {name:"Luxor", attractionSites:["Valley of the Kings","Karnak","Luxor Temple"]},
-    {name:"Sharm El-Sheikh", attractionSites:["Naama","Ras Muhammad National Park"]},
+    {name:"Aswan", attractionSites:["Abu-Simbel"," Nubian Museum"," Elephantine"]},
+    {name:"Cairo", attractionSites:["The Pyramids"," Nile"," Khan elKhalili"]},
+    {name:"Luxor", attractionSites:["Valley of the Kings"," Karnak"," Luxor Temple"]},
+    {name:"Sharm El-Sheikh", attractionSites:["Naama"," Ras Muhammad National Park"]},
 ]
 
 export const citiesWeather = [

@@ -1,7 +1,7 @@
 <form [formGroup]="techIdeasForm">
-    <div>
-        <label for="userName">Name</label>
-        <input type="text" id="userName" formControlName="name">
+    <div class="col-6 offset-3">
+        <label for="userName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="userName" formControlName="name">
    
         <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
             Please insert your name.
@@ -14,27 +14,27 @@
         </span>  
     </div>
     <br>
-    <div>
-        <label for="userEmail">E-Mail</label>
-        <input type="text" id="userEmail" formControlName="email">
+    <div class="col-6 offset-3">
+        <label for="userEmail" class="form-label">E-Mail</label>
+        <input type="text" class="form-control" id="userEmail" formControlName="email">
     
         <span *ngIf="emailFormControl.touched && (emailFormControl.errors?.['required'] || emailFormControl.errors?.['email'])">
             Please enter a valid email.
         </span> 
     </div>
     <br>
-    <div>
-        <label for="userAge">Age</label>
-        <input type="text" id="userAge" formControlName="age">
+    <div class="col-6 offset-3">
+        <label for="userAge" class="form-label">Age</label>
+        <input type="text" class="form-control" id="userAge" formControlName="age">
     
         <span *ngIf="ageFormControl.touched && ageFormControl.errors?.['required']">
             Please enter your age.
         </span> 
     </div>
     <br>
-    <div>
-        <label for="targetCity">Target City</label>
-        <select id="targetCity" formControlName="city">
+    <div class="col-6 offset-3">
+        <label for="targetCity" class="form-label">Target City</label>
+        <select class="form-control" id="targetCity" formControlName="city">
             <option value="{{cities}}" *ngFor="let city of cities">{{city}}</option>
         </select>
     
@@ -43,9 +43,9 @@
         </span> 
     </div>
     <br>
-    <div>
-        <label for="brief">Brief about your Technical Idea</label>
-        <textarea rows="4" cols="50" id="brief" formControlName="brief"></textarea>
+    <div class="col-6 offset-3">
+        <label for="brief" class="form-label">Brief about your Technical Idea</label>
+        <textarea rows="4" cols="50" class="form-control" id="brief" formControlName="brief"></textarea>
     
         <span *ngIf="briefFormControl.touched && briefFormControl.errors?.['required']">
             Please insert a brief description of your project.
@@ -58,5 +58,6 @@
         </span> 
     </div>
     <br>
-    <button type="button" (click)="onSubmit()" [disabled]="techIdeasForm.invalid">Submit</button>
+    <button class="col-2 offset-5 btn btn-dark" type="button" (click)="onSubmit()" [disabled]="techIdeasForm.invalid">Submit</button>
+    <div class="hidden" *ngIf="show_div">Thank you for your submission!</div>
 </form>

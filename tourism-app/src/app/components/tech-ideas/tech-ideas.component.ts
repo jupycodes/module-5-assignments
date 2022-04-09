@@ -24,10 +24,11 @@ export class TechIdeasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  show_div: boolean = false
   onSubmit() {
     console.log(this.techIdeasForm.value);
     this.techIdeasForm.reset()
+    this.show_div = true
   }
 
   get nameFormControl(){

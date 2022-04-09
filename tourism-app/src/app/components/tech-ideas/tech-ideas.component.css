@@ -1,8 +1,18 @@
 form {
     margin-top: 50px;
+    color: rgb(116, 68, 68);
 }
 
 span {
     color: red;
     
+}
+
+.btn {
+    color: white;
+    background-color: rgb(116, 68, 68);
+}
+
+.hidden {
+    text-align: center;
 }

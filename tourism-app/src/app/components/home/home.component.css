@@ -1,8 +1,29 @@
-#appName {
+
+  #appName {
+    text-align: center;
     padding-top: 50px;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 #aim {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
 }
+
+#bg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 5px solid rgb(109, 41, 41);
+  }
+
+  div {
+      color: rgb(109, 41, 41);
+  }
+
+
+
+ 
